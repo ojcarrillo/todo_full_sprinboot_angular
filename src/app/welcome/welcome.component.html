@@ -1,0 +1,11 @@
+<h1>welcome {{name}}.</h1>
+<div class="container">
+    para acceder a lista por hacer, haga click <a routerLink="/todos">aqui</a>
+</div>
+<div class="container">
+    click aquí para un saludo personalizado!
+    <button (click)=getWelcomeMessageWithParameter() class="btn btn-success">Bienvenido!!!</button>
+</div>
+<div class="container">
+    <h2>{{welcomeMessage}}</h2>
+</div>

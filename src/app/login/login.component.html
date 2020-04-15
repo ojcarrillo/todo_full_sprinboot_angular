@@ -1,0 +1,27 @@
+<h1>
+    Ingresar a la aplicación</h1>
+<div>
+    <small class="alert alert-warning" *ngIf='invalidLogin'>{{ errorMessage }}</small>
+</div>
+<br>
+<div>
+    <div class="row col-6">
+        <div class="col-3">
+            User Name :
+        </div>
+        <div class="col-3">
+            <input name="username" type="text" [(ngModel)]="username" /></div>
+    </div>
+    <div class="row col-6">
+        <div class="col-3">
+            Password :
+        </div>
+        <div class="col-3">
+            <input name="password" type="password" [(ngModel)]="password" /></div>
+    </div>
+    <div>
+        <!-- <button (click)=handleLogin() class="btn btn-success hide">Login</button> -->
+        <!-- <button (click)=handleBasicAuthLogin() class="btn btn-success">Login</button> -->
+        <button (click)=handleJWTAuthLogin() class="btn btn-success">Login</button>
+    </div>
+</div>

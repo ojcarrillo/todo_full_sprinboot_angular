@@ -1,0 +1,13 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><a href="https://www.in28minutes.com" class="navbar-brand" target="_blank">in28minutes</a></div>
+        <ul class="navbar-nav" *ngIf="auth.isUserLoggedIn()">
+            <li><a routerLink="/welcome/oda" class="nav-link">Home</a></li>
+            <li><a routerLink="/todos" class="nav-link">Todos</a></li>
+        </ul>
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li *ngIf="!auth.isUserLoggedIn()"><a routerLink="/login" class="nav-link">Ingresar</a></li>
+            <li *ngIf="auth.isUserLoggedIn()"><a routerLink="/logout" class="nav-link">Salir</a></li>
+        </ul>
+    </nav>
+</header>
